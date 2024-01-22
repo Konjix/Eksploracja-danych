@@ -85,11 +85,11 @@ def statistic_test_3(data_1_file_name, data_2_file_name, data_3_file_name, corre
             corr_1_3, p_value_1_3 = calculate_correlation(data_1_unit_aligned, data_3_unit_aligned, correlation_type)
             corr_2_3, p_value_2_3 = calculate_correlation(data_2_unit_aligned, data_3_unit_aligned, correlation_type)
             new_rows.append({
-                'Administrative_Unit': [unit], 
-                'Correlation_1_3': [corr_1_3], 
-                'Correlation_2_3': [corr_2_3], 
-                'P-Value_1_3': [p_value_1_3], 
-                'P-Value_2_3': [p_value_2_3],
+                'Administrative_Unit': unit, 
+                'Correlation_1_3': corr_1_3, 
+                'Correlation_2_3': corr_2_3, 
+                'P-Value_1_3': p_value_1_3, 
+                'P-Value_2_3': p_value_2_3,
                 'Significance_1_3': p_value_1_3 < 0.05,
                 'Significance_2_3': p_value_2_3 < 0.05,
             })
@@ -127,10 +127,10 @@ file_name_test_trios = [
 ]
 
 
-# Test for pairs
+'''# Test for pairs
 for test_pair in file_name_test_pairs:
     for test_type in test_types:
-        statistic_test(test_pair[0], test_pair[1], test_type)
+        statistic_test(test_pair[0], test_pair[1], test_type)'''
 
 # Test for trios
 for test_trio in file_name_test_trios:
