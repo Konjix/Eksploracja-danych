@@ -127,10 +127,10 @@ file_name_test_trios = [
 ]
 
 
-'''# Test for pairs
+# Test for pairs
 for test_pair in file_name_test_pairs:
     for test_type in test_types:
-        statistic_test(test_pair[0], test_pair[1], test_type)'''
+        statistic_test(test_pair[0], test_pair[1], test_type)
 
 # Test for trios
 for test_trio in file_name_test_trios:
